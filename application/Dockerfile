@@ -41,7 +41,7 @@ COPY ./ssl/herlios-front.key /etc/ssl/private/
 RUN update-ca-certificates
 
 # Apache config
-RUN mkdir /var/www/herlios.test
+RUN mkdir /var/www/herlios.local
 
 COPY ./apache/herlios.conf /etc/apache2/sites-available/100-herlios.conf
 

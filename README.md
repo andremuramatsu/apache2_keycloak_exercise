@@ -33,10 +33,10 @@ For development purpose, this project will use self-signed CA and Certificates.
 ```
 $ openssl genrsa -out ./ssl/herlios-ca.key 2048 
 $ openssl req -new -x509 -nodes -days 365 -key ./ssl/herlios-ca.key -out ./ssl/herlios-ca.crt \
--subj "/C=BR/ST=SAO PAULO/L=SAO PAULO/O=HERLIOS/CN=herlios.com"
+-subj "/C=BR/ST=SAO PAULO/L=SAO PAULO/O=HERLIOS/CN=herlios.local"
 
 $ openssl req -newkey rsa:2048 -nodes -keyout ./ssl/herlios-app.key -out ./ssl/herlios-app.csr \
--subj "/C=BR/ST=SAO PAULO/L=SAO PAULO/O=HERLIOS/CN=herlios.com"
+-subj "/C=BR/ST=SAO PAULO/L=SAO PAULO/O=HERLIOS/CN=herlios.local"
 
 $ openssl x509 -req -days 365 -in ./ssl/herlios-app.csr -out ./ssl/herlios-app.crt -CA ./ssl/herlios-ca.crt -CAkey ./ssl/herlios-ca.key -CAcreateserial
 
